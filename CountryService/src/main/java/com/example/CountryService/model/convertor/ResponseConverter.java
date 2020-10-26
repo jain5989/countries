@@ -16,13 +16,4 @@ public class ResponseConverter {
                 countryResponse.getFlag());
     }
 
-    public static List<Country> convertResponse(List<CountryResponse> countryResponse) {
-        return countryResponse.stream().map(countryResponse1 ->
-                new Country(countryResponse1.getName(),
-                        countryResponse1.getAlpha2Code(),
-                        countryResponse1.getCapital(),
-                        countryResponse1.getPopulation(),
-                        countryResponse1.getFlag())
-        ).collect(Collectors.toList());
-    }
 }
