@@ -1,4 +1,4 @@
-# European Country Service
+# Country Service
 
 ### Introduction
 This project includes the Spring boot based project which has API's for giving the information of european countries .
@@ -49,12 +49,14 @@ password : admin
 
 This project has following module ::
 ```
-controller : 
-There is one controller CountryController which exposed 2 end points mentioned above 
+controller : There is one controller CountryController which exposed 2 end points mentioned above 
 model : Model has contry which will send response , country response , convertor
 sercurity: Security Config will take care of user name and pwd
 service : CountryConsumerService and it's implementation which consumes end points from here : https://restcountries.eu/
 CountryServiceApplication : Spring boot starter class
+
+Idea was to use change Spring Reactive API so output was changed to flux .
+For using functional programming we should use routers and handlers instead of controller but as for this test just Controller is used .
 ```
 
 Swagger UI :
