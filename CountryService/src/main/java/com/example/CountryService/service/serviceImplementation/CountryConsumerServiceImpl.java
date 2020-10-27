@@ -7,13 +7,11 @@ import com.example.CountryService.service.CountryConsumerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Flux;
 
 @Service
 public class CountryConsumerServiceImpl implements CountryConsumerService {
-
 
 
     private final WebClient client;
