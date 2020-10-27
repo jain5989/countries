@@ -2,5 +2,6 @@ This is basic React module which consume backend end point and show all countrie
 
 You need to have npm installed in your system 
 
+Do npm install inside module
 And then run npm start will start the application . And open the UI automatically you have to input password as admin and admin .
 
