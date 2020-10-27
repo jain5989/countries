@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 
 @RestController("/")
@@ -16,20 +16,15 @@ public class CountryController {
     @Autowired
     CountryConsumerService countryConsumerService;
 
-    @GetMapping
-    public String smokeTestService() {
-        return "Service is working";
-    }
-
     @GetMapping("countries/")
-    public List<Country> getCountries() {
-        return countryConsumerService.getEuropeanCountries();
+    public Flux<Country> getCountries() {
+        return countryConsumerService.getAllCountries();
     }
 
 
     @GetMapping("countries/{name}")
-    public Country getCountriesWithName(@PathVariable("name")  String name) {
-        return countryConsumerService.getEuropeanCountryWithName(name);
+    public Flux<Country> getCountriesWithName(@PathVariable("name")  String name) {
+        return countryConsumerService.getCountryDetailsWithName(name);
     }
 
 }
