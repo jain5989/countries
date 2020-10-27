@@ -50,9 +50,13 @@ password : admin
 This project has following module ::
 
 Controller : There is one controller CountryController which exposed 2 end points mentioned above 
+
 Model : Model has contry which will send response , country response , convertor
+
 Security: Security Config will take care of user name and pwd
+
 Service : CountryConsumerService and it's implementation which consumes end points from here : https://restcountries.eu/
+
 CountryServiceApplication : Spring boot starter class
 
 Idea was to use change Spring Reactive API so output was changed to flux .
