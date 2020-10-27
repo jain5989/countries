@@ -62,5 +62,5 @@ Swagger UI :
 http://localhost:8080/swagger-ui/#/
 
 
-Run via:
+Run via inside CountryService module:
 mvn spring-boot:run
