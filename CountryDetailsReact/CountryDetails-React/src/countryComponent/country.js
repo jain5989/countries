@@ -14,14 +14,14 @@ import React from 'react'
                 </td>
               </tr>
               {
-              countries.map((countriesTest) => (
+              countries.map((country) => (
               <tr>
                   <td>
                     <h5 class="card-title">
-                    <a href = "/">{countriesTest.name}</a></h5>
+                    <a href = "/">{country.name}</a></h5>
                   </td>
                     <td>
-                       <h5 class="card-title">{countriesTest.countryCode}</h5>
+                       <h5 class="card-title">{country.countryCode}</h5>
                     </td>
                 </tr>
               ))}
