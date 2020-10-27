@@ -45,8 +45,6 @@ public class HttpRequestTest {
                 .expectStatus().isUnauthorized()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBodyList(String.class);
-
-
     }
 
     @Test
@@ -63,7 +61,6 @@ public class HttpRequestTest {
         } catch (HttpServerErrorException e) {
             assertEquals(e.getStatusCode(), HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 
 
@@ -76,8 +73,6 @@ public class HttpRequestTest {
                 .expectStatus().isOk()
                 .expectHeader().contentType(MediaType.APPLICATION_JSON)
                 .expectBodyList(String.class);
-
-
     }
 
     private String getUrl() {
